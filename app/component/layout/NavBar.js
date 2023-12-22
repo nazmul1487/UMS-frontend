@@ -7,8 +7,8 @@ import Link from 'next/link'
 // import { useGlobalContext } from '@/app/Context/store'
 
 const navigation = [
-  { name: 'ALL PRODUCT', href: '#', current: true },
-  { name: 'Go TO MAIN SITE', href: '#', current: false },
+  { name: 'ALL USER', href: '#', current: true },
+  { name: 'SHORT NOTICE', href: '#', current: false },
 ]
 
 function classNames(...classes) {
