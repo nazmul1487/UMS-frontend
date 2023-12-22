@@ -7,7 +7,7 @@ import Link from 'next/link'
 // import { useGlobalContext } from '@/app/Context/store'
 
 const navigation = [
-  { name: 'ALL USER', href: '#', current: true },
+  { name: 'ALL USER', href: '/user/view-all', current: true },
   { name: 'SHORT NOTICE', href: '#', current: false },
 ]
 
