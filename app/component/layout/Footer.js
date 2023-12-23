@@ -12,7 +12,6 @@ export default function Footer() {
         </div>
         <div className="grid grid-cols-1 gap-4 py-8">
             <div className="px-4 text-center">©NHN 2023. All rights reserved.</div>
-  
         </div>
       </div>
     </footer>
