@@ -26,7 +26,7 @@ export default async function UserInfo( {params}) {
                         <ol className='my-3'><span className='font-bold'>Mobile: </span>{userData.contactNo}</ol>
                         <div className="flex flex-wrap justify-evenly my-10">  
                             <Link href="/user/view-users" className="px-6 py-2 text-red-100 rounded bg-gradient-to-r from-red-600 to-red-400 hover:from-red-600 hover:to-red-800">Go Back</Link>
-                            <Link href="" className="px-6 py-2 text-green-100 rounded bg-gradient-to-r from-red-400 via-yellow-600 to-yellow-500 text-center">Edit</Link>
+                            <Link href={`/user/view-users/update/${userData.id}`} className="px-6 py-2 text-green-100 rounded bg-gradient-to-r from-red-400 via-yellow-600 to-yellow-500 text-center">Edit</Link>
 
                         </div>
                             
