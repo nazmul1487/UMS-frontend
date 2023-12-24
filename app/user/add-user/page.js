@@ -31,6 +31,7 @@ export default function AddUser() {
 			user
 		);
         router.push('/user/view-users');
+        router.refresh()
 	};
 
     return (

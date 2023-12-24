@@ -41,9 +41,11 @@ export const get_users = async () => {
 
 
   export const deleteUserData = async (id) => {
+    console.log("API CALL",id);
     try {
       const deleteUrl = `http://localhost:8082/users/delete/${id}`;
       const response = await axios.delete(deleteUrl);
+      console.log("Done",);
       return response.data; // Assuming the response contains relevant data
     } catch (error) {
       throw error;
