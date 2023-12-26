@@ -9,16 +9,17 @@ export default function HandleDelete({iddata}) {
   const router = useRouter();
 
   // useEffect(() => {
-  //   // Simulating the API call on component mount
   //   handleDelete();
   // }, []);
   const handleDelete = async () => {
     // console.log("button click working")
     try {
       const response = await axios.delete(`http://localhost:8082/users/delete/${iddata}`);
-      // Handle success (e.g., update UI, show a success message)
+
       window.location.reload();
+      alert("User Delete Successfully.")
     } catch (error) {
+
       throw error;
       // console.error('Error during delete request:', error);
       // Handle error (e.g., show an error message)

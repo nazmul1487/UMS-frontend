@@ -4,57 +4,27 @@ import Link from 'next/link';
 import HandleDelete from './handleDelete';
 
 export default async function ViewAll() {
+
     const users = await get_users();
 
-    // const handleDelete = async (id) => {
-    //     try {
-    //       await deleteUserData(id);
-    //       // Handle success (e.g., update UI, show a success message)
-    //     } catch (error) {
-    //       console.error('Error during delete request:', error);
-    //       // Handle error (e.g., show an error message)
-    //     }
-    //   };
-    //   loadUsers();
-    // const loadUsers = async () => {
-    // 	const result = await axios.get(
-    // 		"http://localhost:8082/users",
-    // 		{
-    // 			validateStatus: () => {
-    // 				return true;
-    // 			},
-    // 		}
-    // 	);
-    // 	if (result.status === 302) {
-    // 		setUsers(result.data);
-    // 	}
-    // };
-    // console.log("USERS",users);
     return (
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 py-4">
             <div className="flex flex-row h-full mb-5">
                 <div className="w-full mx-auto p-2 bg-white shadow-lg rounded-sm border border-gray-200">
                     <header className="px-3 py-4 border-b border-gray-100">
-
-                        {/* <div className="text-xl font-bold leading-none text-gray-900 dark:text-white">
-                    USER LIST
-                </div> */}
                         <div class="flex flex-row justify-between text-xl font-bold leading-none text-gray-900 dark:text-white">
+
                             <div>USER LIST</div>
                             <Link href="/user/add-user" className='bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full text-sm'>Add New User</Link>
-
                         </div>
-
                     </header>
+
                     <div className="p-0 md:p-2">
                         <div className="flex-wrap  ">
                             <table className="table-auto w-full ">
                                 <thead className="text-sm font-semibold uppercase text-black  bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%">
                                     <tr className='border'>
-                                        {/* <th className="p-1 md:p-2 md:whitespace-nowrap">
-                        <div className="font-semibold text-center">ID</div>
-                        </th> */}
-                                        <th className="p-1 md:p-2 md:whitespace-nowrap">
+                                       <th className="p-1 md:p-2 md:whitespace-nowrap">
                                             <div className="font-semibold text-center">FIRST-NAME</div>
                                         </th>
                                         <th className="p-1 md:p-2 md:whitespace-nowrap ">
@@ -78,9 +48,6 @@ export default async function ViewAll() {
                                     {users.map((udata, index) =>
 
                                         <tr key={index}>
-                                            {/* <td className="p-1 md:p-2 md:whitespace-nowrap">
-                        <div className="text-center">{udata.id}</div>
-                        </td> */}
                                             <td className="p-1 md:p-2">
                                                 <div className=" items-center text-center">
 
@@ -124,12 +91,6 @@ export default async function ViewAll() {
                                             </td>
                                             <td className="px-1 py-2 border text-red-100 rounded bg-gradient-to-r from-red-500 to-red-800 text-center">
                                                 <HandleDelete iddata={udata.id} />
-                                                {/* <button onClick={() => handleDelete(udata.id)}  className="btn btn-warning ">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4">
-                                                        <path fillRule="evenodd" d="M5 3.25V4H2.75a.75.75 0 0 0 0 1.5h.3l.815 8.15A1.5 1.5 0 0 0 5.357 15h5.285a1.5 1.5 0 0 0 1.493-1.35l.815-8.15h.3a.75.75 0 0 0 0-1.5H11v-.75A2.25 2.25 0 0 0 8.75 1h-1.5A2.25 2.25 0 0 0 5 3.25Zm2.25-.75a.75.75 0 0 0-.75.75V4h3v-.75a.75.75 0 0 0-.75-.75h-1.5ZM6.05 6a.75.75 0 0 1 .787.713l.275 5.5a.75.75 0 0 1-1.498.075l-.275-5.5A.75.75 0 0 1 6.05 6Zm3.9 0a.75.75 0 0 1 .712.787l-.275 5.5a.75.75 0 0 1-1.498-.075l.275-5.5a.75.75 0 0 1 .786-.711Z" clipRule="evenodd" />
-                                                    </svg>
-
-                                                </button> */}
                                             </td>
 
                                         </tr>
