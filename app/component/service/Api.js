@@ -15,7 +15,7 @@ export const get_users = async () => {
     //   console.log("ddddddd", data);
       return data;
     } catch (error) {
-      console.error("ERROR TO GET DATA", error);
+      // console.error("ERROR TO GET DATA", error);
       throw error; // Rethrow the error to handle it in the calling code
     }
   };
@@ -34,18 +34,18 @@ export const get_users = async () => {
       const data = await res.data;
       return data;
     } catch (error) {
-      console.error("ERROR TO GET DATA",error);
+      // console.error("ERROR TO GET DATA",error);
       throw error; // Rethrow the error to handle it in the calling code
     }
   }
 
 
   export const deleteUserData = async (id) => {
-    console.log("API CALL",id);
+    // console.log("API CALL",id);
     try {
       const deleteUrl = `http://localhost:8082/users/delete/${id}`;
       const response = await axios.delete(deleteUrl);
-      console.log("Done",);
+      // console.log("Done",);
       return response.data; // Assuming the response contains relevant data
     } catch (error) {
       throw error;

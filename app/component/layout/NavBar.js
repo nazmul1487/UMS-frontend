@@ -8,7 +8,7 @@ import Link from 'next/link'
 
 const navigation = [
   { name: 'ALL USER', href: '/user/view-users', current: true },
-  { name: 'SHORT NOTICE', href: '#', current: false },
+
 ]
 
 function classNames(...classes) {
@@ -70,9 +70,7 @@ export default function NavBar() {
                   </div>
                 </div>
               </div>
-              <div className=" hidden sm:ml-6 sm:block absolute inset-y-0 right-0 items-center pr-2 sm:static sm:inset-auto sm:pr-0">
-                  <p className='text-gray-300 rounded-md px-3 py-2 text-base font-medium'>09638776600</p>
-             </div>
+            
             </div>
           </div>
 

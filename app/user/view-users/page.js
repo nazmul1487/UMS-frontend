@@ -64,6 +64,9 @@ export default async function ViewAll() {
                                             <div className="font-semibold text-center">EMAIL</div>
                                         </th>
                                         <th className="p-1 md:p-2 md:whitespace-nowrap ">
+                                            <div className="font-semibold text-center">GENDER</div>
+                                        </th>
+                                        <th className="p-1 md:p-2 md:whitespace-nowrap ">
                                             <div className="font-semibold text-center">CONTACT NO</div>
                                         </th>
                                         <th colSpan={3} className="p-1 md:p-2 md:whitespace-nowrap ">
@@ -93,6 +96,10 @@ export default async function ViewAll() {
                                             <td className="p-1 md:p-2 md:whitespace-nowrap">
 
                                                 <div className="text-center font-bold">{udata.email}</div>
+                                            </td>
+                                            <td className="p-1 md:p-2 md:whitespace-nowrap">
+
+                                                <div className="text-center font-bold">{udata.gender}</div>
                                             </td>
                                             <td className="p-1 md:p-2 md:whitespace-nowrap">
 
